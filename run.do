@@ -6,7 +6,7 @@ if [file exists work] {
 
 vlib work
 
-vlog mult_and_add_tb.sv mult_and_add.sv
+vlog booth3_tb.sv booth3.sv
 
 vsim -novopt work.tb
 

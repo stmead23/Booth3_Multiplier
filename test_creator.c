@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <stdint.h>
 
-int main(void) {
+int main(int argc, char* argv[]) {
     //Open files for input and output, then check that they opened
-    FILE* test_vecs = fopen("test.txt", "r");
+    if(argc < 2) {
+		printf("Error. No file specified.\n");
+		return 1;
+	}
+	
+	FILE* test_vecs = fopen(argv[1], "r");
     FILE* output = fopen("test.tv", "w");
 
     if (!test_vecs || !output) {
